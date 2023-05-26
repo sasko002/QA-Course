@@ -4,7 +4,7 @@ numbers.forEach(function(number, i){
 }
 )
 
---------map()---------------
+--------map()-------------
 
 const even = numbers.map(function(number){
     if(number%2===0){
