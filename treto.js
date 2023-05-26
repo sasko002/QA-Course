@@ -1,72 +1,71 @@
 const numbers = [10,18,25,30,49,66];
-//numbers.forEach(function(number, i){
-  //  console.log(number, i);
-//}
-//)
+numbers.forEach(function(number, i){
+    console.log(number, i);
+}
+)
 
-//--------map()---------------
+--------map()---------------
 
-//const even = numbers.map(function(number){
-  //  if(number%2===0){
-   //     number=`${number} is even`;
-   // }else{
-   //     number=`${number} is not even`;
-   // }
-   //return number;
-//})
-//console.log(even);
+const even = numbers.map(function(number){
+    if(number%2===0){
+        number=`${number} is even`;
+    }else{
+        number=`${number} is not even`;
+   }
+  return number;
+})
+console.log(even);
+----------reduce()------------
 
-//----------reduce()------------
+const sum = numbers.reduce(function(total, num){
+return (total+num);
+}, 0) 
+console.log(sum/numbers.length);
 
-//const sum = numbers.reduce(function(total, num){
-//return (total+num);
-//}, 0) 
-//console.log(sum/numbers.length);
+-----------------filter()-------------------
 
-//-----------------filter()-------------------
+const result = numbers.filter(function(number){
+    return number > 25;
 
-//const result = numbers.filter(function(number){
-  //  return number > 25;
+}); 
+console.log(result);
 
-//}); 
-//console.log(result);
-
-//--------------object------------
+object------------
 
 
-//const person={
-   // firstName:"Alexandar", 
-   // lastName:"Stoyanov", 
-  //  age:"21", 
-   // fullName: function() {
-  //      return this.firstName + " " + this.lastName;
-   // },
-  //  yearOfBirth: function(){ 
-    //    return new Date().getFullYear() - this.age
+const person={
+    firstName:"Alexandar", 
+    lastName:"Stoyanov", 
+    age:"21", 
+    fullName: function() {
+        return this.firstName + " " + this.lastName;
+    },
+    yearOfBirth: function(){ 
+        return new Date().getFullYear() - this.age
         
-   // }
-//}
+    }
+}
 
-///console.log(person.yearOfBirth())
+console.log(person.yearOfBirth())
 
-//-----------class--------------
+-----------class--------------
 
-//class User{
-    //constructor(firstName,lastName,age){
-//this.firstName = firstName;
-    //    this.lastName = lastName;
-   //     this.age= age;
-   // }
-    //fullName() {
-  //  return this.firstName + " " + this.lastName;
-//}
-//yearOfBirth(){ 
-  //  return new Date().getFullYear() - this.age
+class User{
+    constructor(firstName,lastName,age)
+  {this.firstName = firstName;
+      this.lastName = lastName;
+     this.age= age;
+    }
+    fullName() {
+    return this.firstName + " " + this.lastName;
+}
+yearOfBirth(){ 
+   return new Date().getFullYear() - this.age
     
-//}
-//}
-//let person = new User( "Alexandar", "Stoyanov", "21") 
-//console.log(person.fullName())
+}
+}
+let person = new User( "Alexandar", "Stoyanov", "21") 
+console.log(person.fullName())
 
 
 
